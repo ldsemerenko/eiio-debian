@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Eiio-debian by nagadomi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Eiio-debian</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/nagadomi/eiio-debian">View the Project on GitHub <small>nagadomi/eiio-debian</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nagadomi/eiio-debian/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nagadomi/eiio-debian/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nagadomi/eiio-debian">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a name="clone" class="anchor" href="#clone"><span class="octicon octicon-link"></span></a>clone</h2>
+
+<pre><code>git clone https://github.com/nagadomi/eiio-debian.git eiio-debian/eiio-debian
+</code></pre>
+
+<h2>
+<a name="update-upstream-source" class="anchor" href="#update-upstream-source"><span class="octicon octicon-link"></span></a>update upstream source</h2>
+
+<pre><code>git-import-orig --pristine-tar ../../eiio/eiio-0.5.4.tar.gz
+</code></pre>
+
+<h2>
+<a name="marge-branch" class="anchor" href="#marge-branch"><span class="octicon octicon-link"></span></a>marge branch</h2>
+
+<pre><code>git checkout ppa-saucy
+git merge master
+</code></pre>
+
+<h2>
+<a name="update-changelog" class="anchor" href="#update-changelog"><span class="octicon octicon-link"></span></a>update changelog</h2>
+
+<pre><code>dch
+git add debian/changelog
+git commit
+</code></pre>
+
+<h2>
+<a name="build-debian-source-package" class="anchor" href="#build-debian-source-package"><span class="octicon octicon-link"></span></a>build debian source package</h2>
+
+<pre><code>git-buildpackage -tc -S -sa --git-pristine-tar --git-ignore-branch
+</code></pre>
+
+<h2>
+<a name="upload-to-launchpad" class="anchor" href="#upload-to-launchpad"><span class="octicon octicon-link"></span></a>upload to launchpad</h2>
+
+<pre><code>dput ppa-saucy ../eiio_0.5.4-1ppa1\~saucy_source.changes 
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nagadomi">nagadomi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
