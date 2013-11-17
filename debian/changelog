@@ -1,3 +1,9 @@
+eiio (0.5.4-1ppa1~precise) precise; urgency=low
+
+  * port
+
+ -- nagadomi <nagadomi@mpn1>  Sun, 17 Nov 2013 10:27:59 +0900
+
 eiio (0.5.4-1) unstable; urgency=low
 
   * port
